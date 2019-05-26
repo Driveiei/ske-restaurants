@@ -34,19 +34,16 @@ public class OrderList {
     	food.soldUnit(quantity);
     }
     
-    public void removeFood(String foodName){
-    	int i = 0;
-    	for(Food food : foodList) {
-            if(food.getName().equals(foodName)) {
+    public void removeFood(String foodName) {
+        for (int i = 0; i < foodList.size(); i++) {
+            if (foodList.get(i).getName().equals(foodName)) {
                 foodList.remove(i);
                 break;
             }
-            i++;
         }
     }
-    
-    public List<Food> getStock(){
-    	return foodList;
-    }
 
+    public void clearStock(){
+        foodList.clear();
+    }
 }

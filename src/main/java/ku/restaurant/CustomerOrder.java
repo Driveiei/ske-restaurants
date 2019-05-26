@@ -43,11 +43,12 @@ public class CustomerOrder {
 		this.customerOrder = m.foodList;
 	}
 
-	static class Memento {
+	static class Memento{
 		private List<Food> foodList;
 
 		private Memento(List<Food> customerOrder) {
 			this.foodList = customerOrder;
 		}
+
 	}
 }

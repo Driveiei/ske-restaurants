@@ -14,9 +14,9 @@ Scenario: When customer buy one food, find the total price of bill that customer
     Then the price of this bill is 245
 
 Scenario: When customer buy many foods, find the total price of bill that customer should had paid.
-    When customer buy food Hamburger with quantity 5
+    When customer buy food Hamburger with quantity 10
     And customer buy food Curry with quantity 5
-    Then the price of this bill is 522.5
+    Then the price of this bill is 645
 
 Scenario: When customer buy many foods and some orders are out of stocks, find the total price of bill that customer should had paid.
     When customer buy food FrenchFried with quantity 5
@@ -28,7 +28,7 @@ Scenario: When customer buy many foods and some orders are out of stocks, find t
 Scenario: When customer buy many foods and some orders are repeated, find the total price of bill that customer should had paid.
     When customer buy food Hamburger with quantity 15
     And customer buy food Hamburger with quantity 5
-    Then the price of this bill is 490
+    Then the price of this bill is 367.5
 
 Scenario: When customer not buy anything, find the total price of bill that customer should had paid.
     Then the price of this bill is 0
